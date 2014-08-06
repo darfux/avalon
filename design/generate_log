@@ -1,0 +1,10 @@
+controller:
+	main index
+	user::session new create destroy
+
+model:
+	resource instance:references{polymorphic}, user:references
+
+scaffold:
+	user account:string nickname:string password_digest:string
+	article title:string content:text
