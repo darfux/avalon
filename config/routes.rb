@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   namespace :user do
   get 'session/new'
+  get 'login', to: 'session#new', as: :login
+  delete 'logout', to: 'session#destroy', as: :logout
+  post 'session/create' 
   end
 
   namespace :user do

@@ -1,2 +1,11 @@
-<h1>User::Session#new</h1>
-<p>Find me in app/views/user/session/new.html.erb</p>
+<%= form_tag({:action => "create"}, {:class => "form"}) do %>
+  <div class="field">
+    <%= label_tag_t :account %><br>
+    <%= text_field_tag :account %>
+  </div>
+  <div class="field">
+    <%= label_tag_t :password %><br>
+    <%= text_field_tag :password %>
+  </div>
+  <%= submit_tag tf(:login), :id => "submit", :name => "submit", :class => "form_submit", data: { disable_with: tf(:processing) } %>
+<% end -%>
