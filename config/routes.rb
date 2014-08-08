@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  resources :articles
+
   resources :users
 
   namespace :user do
   get 'session/new'
   get 'login', to: 'session#new', as: :login
   delete 'logout', to: 'session#destroy', as: :logout
-  post 'session/create' 
+  post 'sessions', to: 'session#create', as: :sessions
   end
 
   namespace :user do

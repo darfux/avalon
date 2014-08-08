@@ -57,3 +57,13 @@ zh_cn:
       new:
         account: 账号
         password: 密码
+
+  #HELPERS
+  helpers:
+    label: 
+      user_session:
+        account: 账号
+        password: 密码
+    submit:
+      user_session:
+        create: 登录

@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140804030638) do
+ActiveRecord::Schema.define(version: 20140807082520) do
+
+  create_table "articles", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "resources", force: true do |t|
+    t.integer  "instance_id"
+    t.string   "instance_type"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "resources", ["instance_id", "instance_type"], name: "index_resources_on_instance_id_and_instance_type"
+  add_index "resources", ["user_id"], name: "index_resources_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "account"

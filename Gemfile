@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://ruby.taobao.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -43,3 +43,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 ##CUSTOMIZE
 gem 'quiet_assets', group: :development
+
+gem 'simple_form'
