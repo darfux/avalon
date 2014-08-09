@@ -1,3 +1,18 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$C : articles;
+$D : articles-;
+##{$D}article-area{
+  margin-top: 24px;
+  margin-left: 20%;
+}
+##{$D}article-title{
+  font-size: 32px;
+  width: 480px;
+  padding-bottom: 4px;
+  border-bottom: dashed 1px #999;
+}
+##{$D}article-time{
+  color: gray;
+}

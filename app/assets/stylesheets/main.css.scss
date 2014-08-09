@@ -1,3 +1,31 @@
-// Place all the styles related to the main controller here.
+// Place all the styles related to the Main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$C : main;
+$D : main-;
+##{$D}resource-show{
+  width: 640px;
+  margin: 32px auto 0;
+  font-size: 24px;
+}
+.#{$C}.resource-row
+{
+  & + &{
+    margin-top: 16px;
+  }
+  border-bottom: solid 1px #DDDDDD;
+  a{
+      padding: 4px 8px;
+      text-decoration: none;
+      $color : black;
+      color: $color;
+      font-weight: 400;
+      &:visited{
+        color: $color;
+      }
+    } 
+}
+.#{$C}.create-time{
+  color: gray;
+  float: right;
+}
