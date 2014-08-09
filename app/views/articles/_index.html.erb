@@ -1,0 +1,5 @@
+<% @articles.each do |article| %>
+  <div>
+    <%= link_to article.title, article %>  <%= l article.created_at %>
+  </div>
+<% end %>

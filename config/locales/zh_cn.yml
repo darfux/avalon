@@ -52,6 +52,13 @@ zh_cn:
     logout: 注销
     processing: 处理中...
 
+
+  article:
+    new: 写文章
+  articles:
+    new:
+      title: 发表文章
+
   user:
     session:
       new:
@@ -64,6 +71,11 @@ zh_cn:
       user_session:
         account: 账号
         password: 密码
+      article:
+        title: 标题
+        content: 内容
     submit:
       user_session:
         create: 登录
+      article:
+        create: 发布

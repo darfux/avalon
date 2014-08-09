@@ -1,8 +1,13 @@
 <h1>Main#index</h1>
 <p>Find me in app/views/main/index.html.erb</p>
 <% if current_user %>
+
 <h2>Hello!<%= current_user.nickname %> </h2>
+<%= link_to tp('new', 'article'), new_article_path %>
 <%= link_to tf('logout'), user_logout_path, method: :delete %>
+<%= render 'articles/index' %>
 <% else %>
+
 <%= link_to tf('login'), user_login_path %>
+
 <% end %>
