@@ -13,6 +13,9 @@ module PolymorphicCommonInstance
 			  	class_eval %Q{
 						def #{name}!
 			  			self.#{abstractor}.#{name}
+			  		end
+			  		def #{name}_=(value)
+			  			self.#{abstractor}.#{name}=value
 			  		end			  	
 				  }
 			    # end
