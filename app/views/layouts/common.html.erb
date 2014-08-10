@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <title>Avalon</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body cont="<%= params[:controller] %>">
+<nocont>
+    <div id="nav">
+      <div id="nav-title"><%= link_to 'Avalon', root_path %> | <small> <%= current_user.nickname %>'s blog</small>  </div>
+    </div>
+</nocont>
+<%= yield %>
+
+</body>
+</html>

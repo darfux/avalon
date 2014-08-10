@@ -44,4 +44,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 ##CUSTOMIZE
 gem 'quiet_assets', group: :development
 
-gem 'simple_form'
+gem "font-awesome-rails"
