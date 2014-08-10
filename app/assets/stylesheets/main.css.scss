@@ -8,6 +8,10 @@ $D : main-;
   margin: 32px auto 0;
   font-size: 24px;
 }
+##{$D}new-article{
+  margin-top: 10px;
+  text-align: center;
+}
 .#{$C}.resource-row
 {
   & + &{

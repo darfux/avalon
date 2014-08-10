@@ -55,6 +55,11 @@ zh_cn:
 
   article:
     new: 写文章
+    input_title: 文章标题
+    input_content: 文章内容
+    no_title: 无标题
+    no_content: 无本文
+    
   articles:
     new:
       title: 发表文章
@@ -79,3 +84,4 @@ zh_cn:
         create: 登录
       article:
         create: 发布
+        update: 更新

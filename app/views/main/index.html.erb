@@ -19,7 +19,11 @@
 </nocont>
 
 <% if current_user %>
-<%# link_to tp('new', 'article'), new_article_path %>
+<div id='new-article'>
+  <%= link_to new_article_path do %>
+  <button class='btn'><%= tp('new', 'article') %></button>
+  <% end %>
+</div>
 <div id="resource-show">
   <%= render 'articles/index' %>
 </div>

@@ -1,16 +1,18 @@
-<nocont>
-    <div id="nav">
-      <div id="nav-title">Avalon | <small> <%= current_user.nickname %>'s blog</small>  </div>
-    </div>
-</nocont>
 <div id="article-area">
   <div id="article-title">
     <%= @article.title %>
   </div>
   <div id="article-time">
     <%= l @article.created_at %>
+    <div id="article-function">
+      <%= link_to edit_article_path(@article) do %>
+        <%= fa_icon "pencil", id: 'article-edit'%>
+      <% end %>
+    </div>
   </div>
-  <%= simple_format @article.content %>
+  <div id="article-content">
+    <%= simple_format @article.content %>
+  </div>
 </div>
 
 <!-- 

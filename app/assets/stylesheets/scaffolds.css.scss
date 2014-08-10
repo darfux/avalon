@@ -43,6 +43,13 @@ $theme-color: darken(#66CCFF, 20%);
   color: white;
   font-size: 20px;
   background-color: $theme-color;
+  a{
+    text-decoration: none;
+    color: white;
+    &:visited{
+      color: white;
+    }
+  }
 }
 #nav-title{
   font-weight: 800;
@@ -50,6 +57,39 @@ $theme-color: darken(#66CCFF, 20%);
     font-weight: 600;
   }
   margin-left: 24px;
+}
+
+.btn{
+  $bg : white;
+  background-color: $bg;
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 16px;
+  border: solid 1px #AAA;
+  border-radius: 4px;
+  transition: background-color 300ms ease-out;
+  text-decoration: none;
+  a{
+    text-decoration: none;
+    $color : black;
+    color: $color;
+    font-weight: 800;
+    &:visited{
+      color: $color;
+    }
+  }
+  &:hover{
+    cursor: pointer;
+    background-color: darken($bg,10%);
+  }
+  &.warning{
+    $wbg: orange;
+    border-color: darken($wbg, 10%);
+    background-color: lighten($wbg, 25%);
+    &:hover{
+      background-color: $wbg;
+    }
+  }
 }
 //==DEFAULT==
 body{

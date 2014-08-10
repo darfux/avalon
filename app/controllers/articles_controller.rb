@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_layout
+  layout "common"
   # GET /articles
   # GET /articles.json
   def index
@@ -57,7 +58,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     respond_to do |format|
-      format.html { redirect_to articles_url}
+      format.html { redirect_to root_url}
       format.json { head :no_content }
     end
   end
@@ -67,9 +68,15 @@ class ArticlesController < ApplicationController
     def set_article
       @article = Article.find(params[:id])
     end
+    def set_layout
 
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def article_params
-      params.require(:article).permit(:title, :content)
+      params.require(:article).permit(:title, :content).tap{ |p|
+        [:title, :content].each { |e|
+          p[e].empty? ? p[e]=tp("no_#{e}", :article) : nil
+        }
+      }
     end
 end
