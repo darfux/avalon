@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  instance_id: 
+  instance_type: Instance
+  user_id: 
+
+two:
+  instance_id: 
+  instance_type: Instance
+  user_id: 

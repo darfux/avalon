@@ -1,0 +1,31 @@
+
+
+<div id="article-area">
+  <%= form_for(@article) do |f| %>
+    <div class='submit'>
+      <%= f.submit nil, class: "btn" %>
+      <%= link_to Article.exists?(@article) ? @article : root_url do  %>
+        <button id="cancel" class="btn">取消</button>
+      <% end %>
+    </div>
+    <div id="article-title">
+      <%= f.text_field :title, placeholder: tp('input_title', :article) %>
+    </div>
+    <div id="article-time">
+      <%= l Time.now %>
+    </div>
+    <div id="article-content">
+      <%= f.text_area :content, placeholder: tp('input_content', :article) %>
+    </div>
+    <% if Article.exists? @article %>
+      <div id="delete-article">
+        <%= link_to article_path(@article), method: :delete, data:{ confirm: 'Sure?'} do  %>
+          <%= fa_icon 'times 2x' %>
+        <% end %> 
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+

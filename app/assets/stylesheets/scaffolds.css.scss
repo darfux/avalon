@@ -1,0 +1,129 @@
+$theme-color: darken(#66CCFF, 20%);
+#top-area{
+  background-color: $theme-color;
+  color: white;
+  padding-bottom: 16px;
+  // a{
+  //   padding: 4px 8px;
+  //   text-decoration: none;
+  //   $color : #FFFFFF;
+  //   color: $color;
+  //   font-weight: 800;
+  //   &:visited{
+  //     color: $color;
+  //   }
+  // }
+}
+#site-title{
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#title-user{
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+}
+// #nav{
+//   padding-top: 4px;
+//   a{
+//     &:hover{
+//       // color: darken($color, 10%);
+//       background-color: darken(#66CCFF, 30%);
+//     }
+//   }
+//   .nav-right{
+//     // float: right;
+//   }
+// }
+
+#nav{
+  padding: 4px 0;
+  color: white;
+  font-size: 20px;
+  background-color: $theme-color;
+  a{
+    text-decoration: none;
+    color: white;
+    &:visited{
+      color: white;
+    }
+  }
+}
+#nav-title{
+  font-weight: 800;
+  small{
+    font-weight: 600;
+  }
+  margin-left: 24px;
+}
+
+.btn{
+  $bg : white;
+  background-color: $bg;
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 16px;
+  border: solid 1px #AAA;
+  border-radius: 4px;
+  transition: background-color 300ms ease-out;
+  text-decoration: none;
+  a{
+    text-decoration: none;
+    $color : black;
+    color: $color;
+    font-weight: 800;
+    &:visited{
+      color: $color;
+    }
+  }
+  &:hover{
+    cursor: pointer;
+    background-color: darken($bg,10%);
+  }
+  &.warning{
+    $wbg: orange;
+    border-color: darken($wbg, 10%);
+    background-color: lighten($wbg, 25%);
+    &:hover{
+      background-color: $wbg;
+    }
+  }
+}
+//==DEFAULT==
+body{
+  margin: 0;
+}
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
