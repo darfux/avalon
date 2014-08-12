@@ -4,7 +4,7 @@
   <%= form_for(@article) do |f| %>
     <div class='submit'>
       <%= f.submit nil, class: "btn" %>
-      <%= link_to @article do  %>
+      <%= link_to Article.exists?(@article) ? @article : root_url do  %>
         <button id="cancel" class="btn">取消</button>
       <% end %>
     </div>
