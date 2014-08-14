@@ -1,5 +1,5 @@
 <% @articles.each do |article| %>
   <div class="resource-row">
-    <%= link_to article.title, article %><span class="create-time"><%= l article.created_at %></span>
+    <%= link_to truncate_wch(article.title, length: 36), article %><span class="create-time"><%= l article.created_at %></span>
   </div>
 <% end %>

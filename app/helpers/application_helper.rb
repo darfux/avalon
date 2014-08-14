@@ -15,4 +15,20 @@ module ApplicationHelper
     end
     simple_format(res, html_options, options)
   end
+
+  def truncate_wch(text, options = {}, &block)
+    return unless text
+    length = options.fetch(:length, 30)
+    index = l =0
+    text.each_char do |ch|
+      if ch.ascii_only?
+        l+=0.9
+      else
+        l+=2
+      end
+      index+=1
+      break if l>=length
+    end
+    truncate(text, length: index)
+  end
 end
