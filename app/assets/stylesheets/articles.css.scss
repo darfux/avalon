@@ -6,6 +6,7 @@ $D : articles-;
 ##{$D}article-area{
   width: 850px;
   margin: 24px auto 0;
+  display: table; //limit the selection highlight only on text
 }
 ##{$D}article-title{
   font-family: sans-serif;
@@ -15,6 +16,7 @@ $D : articles-;
   width: $width;
   padding-bottom: 4px;
   border-bottom: dashed 1px #999;
+  margin-left: -18px;
 
   input{
     margin: 0;
@@ -31,16 +33,23 @@ $D : articles-;
 }
 ##{$D}article-time{
   color: gray;
+  margin-left: -18px;
 }
 ##{$D}article-content{
   font-family: monospace;
   $font-size: 20px;
-  $width: 42em;
   margin-top: 24px;
+  $width: 840px;
+  width: $width;
   font-size: $font-size;
+  p{
+    -webkit-margin-before: 1.2em;
+    &:nth-of-type(1){
+      -webkit-margin-before: 0em;
+    }
+  }
   textarea{
-    margin: 0;
-    padding: 0;
+    padding: 0px;
     font-family: monospace;
     transition: box-shadow 0.45s ease-in-out;
     box-shadow: 0 0 3px #AAA;
@@ -49,7 +58,7 @@ $D : articles-;
       box-shadow: 0 0 6px #888;
     }
     font-size: $font-size;
-    width: $width;
+    width: $width; // wider 1em than show, so it can show same characters as show
     height: 32em;
   }
 }
